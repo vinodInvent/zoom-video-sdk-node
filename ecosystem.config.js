@@ -1,15 +1,18 @@
-module.exports = {
+
+ module.exports = {
     apps: [
       {
-        name: "zoom-video-sdk",           // Name of your app
-        script: "npm",                // Command to run (using npm)
-        args: "start",              // Arguments for the command
+        name: "zoom-video-sdk", // Application name
+        script: "npm",       // Command to run
+        args: "start",       // Arguments for the script
         env: {
-          PORT: 8900,                 // Custom port
-          NODE_ENV: "development"     // Set environment (e.g., development or production)
+          NODE_ENV: "development", // Environment for development
         },
-        watch: true                   // Optional: Automatically restart on file changes
-      }
-    ]
+        env_production: {
+          NODE_ENV: "production", // Environment for production
+        },
+      },
+    ],
   };
+
   
